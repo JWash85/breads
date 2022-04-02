@@ -1,8 +1,6 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-const React = require('react')
-const Default = require('./layouts/Default')
 
 function New () {
     return (
@@ -18,7 +16,7 @@ function New () {
           />
           <label htmlFor="image">Image</label>
           <input
-            type="text"
+            type="url"
             name="image"
             id="image"/>
           <label htmlFor="hasGluten">Has Gluten?</label>
