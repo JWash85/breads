@@ -1,26 +1,26 @@
-const express = require('express')
+const express = require("express");
 
-//Configuration
-require('dotenv').config()
-const PORT = process.env.PORT
-const app = express()
+// CONFIGURATION
+require("dotenv").config();
+const PORT = process.env.PORT;
+console.log(PORT);
 
 // MIDDLEWARE
 //middleware should be added above routes
-app.set('views', __dirname + '/views')
-app.set('view engine', 'jsx')
-app.engine('jsx', require('express-react-views').createEngine())
+app.set("views", __dirname + "/views");
+app.set("view engine", "jsx");
+app.engine("jsx", require("express-react-views").createEngine());
 
-//Routes
-app.get('/', (req, res) => {
-    res.send('Welcome to an Awesome App about Breads!')
-})
+// ROUTES
+app.get("/", (req, res) => {
+  res.send("Welcome to an Awesome App about Breads");
+});
 
-//Breads
-const breadsController = require('./controllers/breads_controller.js')
-app.use('/breads', breadsController)
+// Breads
+const breadsController = require("./controllers/breads_controller.js");
+app.use("/breads", breadsController);
 
-//Listen
+// LISTEN
 app.listen(PORT, () => {
-    console.log('nomming at port', PORT);
-})
+  console.log("nomming at port", PORT);
+});
