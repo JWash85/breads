@@ -10,11 +10,12 @@ function Default(html) {
             <body>
                 <h1>HTML Rendered!</h1>
                 <div className="container">
-                    {html.children} 
+                    {html.children} {/*'{}'Tells react/jsx to stop, evauate whats inside then render */}
                 </div>
             </body>
         </html>
     )
 }
 
+//Exports code to be used elsewhere
 module.exports = Default

@@ -3,7 +3,7 @@ const express = require("express");
 // CONFIGURATION
 require("dotenv").config();
 const PORT = process.env.PORT;
-console.log(PORT);
+const app = express()
 
 // MIDDLEWARE
 //middleware should be added above routes
