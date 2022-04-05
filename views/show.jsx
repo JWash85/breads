@@ -6,6 +6,11 @@ function Show({ bread, index }) {
   // console.log(bread.name)
   return (
     <Default>
+      <div className="backButton">
+        <a href="/breads">
+          <button>Go back to the index</button>
+        </a>
+      </div>
       <h3>{bread.name}</h3>
       <p>
         and it
@@ -13,10 +18,12 @@ function Show({ bread, index }) {
         have gluten.
       </p>
       <img src={bread.image} alt={bread.name} />
+      <p>Baked by {bread.baker}</p>
       <li>
         <a href="/breads">Go home</a>
       </li>
-      <form action={`/breads/${index}?_method=DELETE`} method="POST">
+      <a href={`/breads/${bread.id}/edit`}><button>Edit</button></a>
+      <form action={`/breads/${bread.id}?_method=DELETE`} method="POST">
         <input type="submit" value="DELETE" />
       </form>
     </Default>
